@@ -1,6 +1,6 @@
 // Array para armazenar os nomes dos amigos
 let amigos = [];
-
+let quantidadeMinima = 4
 // Função para adicionar um amigo à lista
 function adicionar() { 
     const input = document.getElementById('nome-amigo');
@@ -50,8 +50,9 @@ function atualizarListaAmigos() {
 
 // Função para sortear um amigo secreto
 function sortear() {
-    if (amigos.length < 2) {
-        alert('Adicione pelo menos dois amigos para sortear.');
+
+    if (amigos.length < quantidadeMinima) {
+        alert(`Adicione pelo menos ${quantidadeMinima} amigos para sortear.`);
         return;
     }
 
