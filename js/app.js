@@ -1,11 +1,17 @@
 // Array para armazenar os nomes dos amigos
 let amigos = [];
 let quantidadeMinima = 4
+
 // Função para adicionar um amigo à lista
 function adicionar() { 
     const input = document.getElementById('nome-amigo');
     if(input.value == '') {
         alert('Informe o nome.');
+        return;
+    }
+
+    if(amigos.includes(input.value)) {
+        alert('Nome ja cadastrado, informe apelido ou sobrenome.')
         return;
     }
 
